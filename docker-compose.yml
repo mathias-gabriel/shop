@@ -1,0 +1,21 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    links:
+      - db
+      - redis
+
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_DB: mg
+      POSTGRES_USER: mg
+      POSTGRES_PASSWORD: mg
