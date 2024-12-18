@@ -7,6 +7,5 @@ module com.mg.shop.application {
     requires com.mg.shop.order.infra;
     requires com.mg.shop.product.infra;
 
-    // requires deep reflection
-    opens com.mg.shop.application to spring.core;
+    opens com.mg.shop.application to spring.core, spring.context;
 }

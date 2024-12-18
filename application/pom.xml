@@ -16,7 +16,7 @@
     <properties>
         <java.version>18</java.version>
         <postgres.driver.version>9.2-1002.jdbc4</postgres.driver.version>
-        <database.url>jdbc:postgresql://localhost:5433/mg</database.url>
+        <database.url>jdbc:postgresql://localhost:5434/mg</database.url>
         <database.user>mg</database.user>
         <databese.password>mg</databese.password>
     </properties>
@@ -95,7 +95,7 @@
                 </executions>
                 <configuration>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost:5433/mg</url>
+                    <url>jdbc:postgresql://localhost:5434/mg</url>
                     <user>mg</user>
                     <password>mg</password>
                     <baselineOnMigrate>true</baselineOnMigrate>
