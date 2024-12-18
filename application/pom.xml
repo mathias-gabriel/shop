@@ -15,7 +15,7 @@
 
     <properties>
         <java.version>18</java.version>
-        <postgres.driver.version>9.2-1002.jdbc4</postgres.driver.version>
+        <postgres.driver.version>42.6.0</postgres.driver.version>
         <database.url>jdbc:postgresql://localhost:5434/mg</database.url>
         <database.user>mg</database.user>
         <databese.password>mg</databese.password>
@@ -53,13 +53,22 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>8.5.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.9</version>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.2.0</version>
         </dependency>
 
     </dependencies>
@@ -70,7 +79,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <fork>true</fork>
                     <skip>false</skip>
                 </configuration>
                 <executions>
