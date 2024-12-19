@@ -2,33 +2,7 @@ package com.mg.shop.order.domain.model;
 
 import java.util.Objects;
 
-public class Item {
-
-    private Product product;
-    private Integer quantity;
-
-    public Item(Product product, Integer quantity) {
-        this.product = product;
-        this.quantity = quantity;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public Item setProduct(Product product) {
-        this.product = product;
-        return this;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public Item setQuantity(Integer quantity) {
-        this.quantity = quantity;
-        return this;
-    }
+public record Item(Product product, Integer quantity) {
 
     @Override
     public boolean equals(Object o) {

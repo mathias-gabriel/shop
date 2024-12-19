@@ -16,11 +16,11 @@ public class OrderDtoMapper {
     }
 
     public Order toDomain(OrderDto orderDto){
-        return new Order(orderDto.getId(), mapItemsTo(orderDto.getItems()));
+        return new Order(orderDto.id(), mapItemsTo(orderDto.items()));
     }
 
     private List<Item> mapItemsTo(List<ItemDto> items) {
-        return items.stream().map(item->new Item(new Product(item.getId(), ""), item.getQuantity() )).collect(Collectors.toList());
+        return items.stream().map(item->new Item(new Product(item.id(), ""), item.quantity() )).collect(Collectors.toList());
     }
 
     public List<OrderDto> toDto(List<Order> orders){
@@ -28,6 +28,6 @@ public class OrderDtoMapper {
     }
 
     public OrderDto toDto(Order order){
-        return new OrderDto();
+        return new OrderDto(order.id(),null);
     }
 }

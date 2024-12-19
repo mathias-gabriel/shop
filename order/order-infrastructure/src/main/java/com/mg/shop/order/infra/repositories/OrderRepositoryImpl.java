@@ -24,7 +24,7 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     private OrderEntity mapToModel(Order order) {
-        return new OrderEntity().id(order.getId());
+        return new OrderEntity(order.id());
     }
 
     @Override

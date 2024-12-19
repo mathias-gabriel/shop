@@ -12,9 +12,9 @@ import java.util.Objects;
 
 public class MakeOrder {
 
-    private OrderRepository orderRepository;
-    private ProductFinder productFinder;
-    private OrderIdGenerator orderIdGenerator;
+    final private OrderRepository orderRepository;
+    final private ProductFinder productFinder;
+    final private OrderIdGenerator orderIdGenerator;
 
     public MakeOrder(OrderRepository orderRepository, ProductFinder productFinder, OrderIdGenerator orderIdGenerator) {
         this.orderRepository = Objects.requireNonNull(orderRepository, "orderRepository must not be null");

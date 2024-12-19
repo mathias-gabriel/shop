@@ -33,10 +33,10 @@ public class OrderController {
 
     @PutMapping()
     public OrderDto command(OrderDto orderDto){
-        return mapToDto(this.makeOrder.ordering(orderDto.getId(), 2));
+        return mapToDto(this.makeOrder.ordering(orderDto.id(), 2));
     }
 
     private OrderDto mapToDto(Order ordering) {
-        return new OrderDto().setId(ordering.getId());
+        return new OrderDto(ordering.id(), null);
     }
 }
