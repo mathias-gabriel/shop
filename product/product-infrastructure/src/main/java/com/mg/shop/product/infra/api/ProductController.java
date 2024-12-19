@@ -29,7 +29,10 @@ public class ProductController {
     }
 
     private List<ProductDto> mapToDto(List<Product> products) {
-        return products.stream().map(product->new ProductDto().setId(product.getId())).collect(Collectors.toList());
+        return products
+                .stream()
+                .map(product->new ProductDto(product.id()))
+                .collect(Collectors.toList());
     }
 
 }

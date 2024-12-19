@@ -5,16 +5,5 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class OrderEntity {
-    @Id
-    private String id;
-
-    public String getId() {
-        return id;
-    }
-
-    public OrderEntity id(String id) {
-        this.id = id;
-        return this;
-    }
+public record OrderEntity(@Id String id) {
 }

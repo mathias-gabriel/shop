@@ -2,43 +2,7 @@ package com.mg.shop.product.domain.model;
 
 import java.util.Objects;
 
-public class Product {
-    private String id;
-    private String name;
-    private Integer stock;
-
-    public Product(String id, String name, Integer stock) {
-        this.id = id;
-        this.name = name;
-        this.stock = stock;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public Product setId(String id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Product setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public Integer getStock() {
-        return stock;
-    }
-
-    public Product setStock(Integer stock) {
-        this.stock = stock;
-        return this;
-    }
+public record Product(String id, String name, Integer stock) {
 
     @Override
     public boolean equals(Object o) {
