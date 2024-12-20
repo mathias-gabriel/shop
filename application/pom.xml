@@ -14,7 +14,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>18</java.version>
+        <java.version>21</java.version>
         <postgres.driver.version>42.6.0</postgres.driver.version>
         <database.url>jdbc:postgresql://localhost:5434/mg</database.url>
         <database.user>mg</database.user>
